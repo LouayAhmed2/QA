@@ -1,13 +1,14 @@
 package interview;
 
+
+
+
 import static org.testng.Assert.assertEquals;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
@@ -30,7 +31,6 @@ public class home {
 
 	@Test
 	public void main() {
-//
 		HomePage Hp = new HomePage();
 		WebElement menu = BaseClass.getWebdriver()
 				.findElement(By.xpath("//*[@id=\"block-oppatient-main-menu\"]/ul/li[8]"));
@@ -54,15 +54,15 @@ public class home {
 		Gs.CheckBoxage();
 		Gs.CheckBoxThree();
 		Gs.CheckBoxTwo();
-//		Gs.CheckBoxVoicemail();
-//		Gs.Submit();
-//		String Successpasserror = Gs.getsuccessmessage();
-//		assertEquals(Successpasserror, "Thank you");
-//
+		Gs.CheckBoxVoicemail();
+		Gs.Submit();
+		String Successpasserror = Gs.getsuccessmessage();
+		assertEquals(Successpasserror, "Thank you");
+
 	}
 
-//	@AfterTest
-//	public void tearDown() {
-//		drive.close();
-//	}
+	@AfterTest
+	public void tearDown() {
+		drive.close();
+	}
 }

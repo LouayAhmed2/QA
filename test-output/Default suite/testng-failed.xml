@@ -5,6 +5,7 @@
     <classes>
       <class name="interview.home">
         <methods>
+          <include name="tearDown"/>
           <include name="main"/>
           <include name="setUp"/>
         </methods>

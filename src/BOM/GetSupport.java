@@ -46,7 +46,7 @@ public class GetSupport {
 
 	public void CheckBoxVoicemail() {
 		WebElement checkVoicemail = BaseClass.getWebdriver()
-				.findElement(By.ByClassName("//*[@id=\"webform-submission-contact-pel-node-3768-add-form\"]/div[8]/label"));
+				.findElement(By.className("//*[@id=\"webform-submission-contact-pel-node-3768-add-form\"]/div[8]/label"));
 		Actions act = new Actions(BaseClass.getWebdriver());
 		act.moveToElement(checkVoicemail).click().build().perform();
 	}
